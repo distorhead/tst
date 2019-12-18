@@ -1,0 +1,16 @@
+name: main
+on:
+  pull_request:
+    types: [edited]
+  schedule:
+  - cron:  '* * * * *'
+jobs:
+  myjob:
+    name: myjob
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+    - name: mystep
+      run: echo DONE
+      shell: bash
