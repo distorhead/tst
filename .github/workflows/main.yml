@@ -8,7 +8,7 @@ jobs:
   myjob:
     name: myjob
     strategy:
-      fail-fast: false
+      fail-fast: true
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
