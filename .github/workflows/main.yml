@@ -1,16 +1,18 @@
 name: main
 on:
   pull_request:
-    types: [edited]
-  schedule:
-  - cron:  '* * * * *'
+    types: [labeled]
+    path:
+    - '*'
 jobs:
   myjob:
     name: myjob
     strategy:
-      fail-fast: false
+      fail-fast: true
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
     - name: mystep
       run: echo DONE
       shell: bash
