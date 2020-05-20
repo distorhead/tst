@@ -14,5 +14,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: mystep
-      run: echo DONE
       shell: bash
+      run: |
+        git status
+        echo DONE
