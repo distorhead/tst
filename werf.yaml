@@ -1,0 +1,8 @@
+configVersion: 1
+project: tst
+---
+image: ~
+from: ubuntu:18.04
+git:
+- add: /
+  to: /app
